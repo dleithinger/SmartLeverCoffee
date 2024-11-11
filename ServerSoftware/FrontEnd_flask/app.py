@@ -9,6 +9,7 @@ from awsiot import mqtt_connection_builder
 import time as t
 import json
 
+# change this before running the code ==================
 # Define ENDPOINT, CLIENT_ID, PATH_TO_CERTIFICATE, PATH_TO_PRIVATE_KEY, PATH_TO_AMAZON_ROOT_CA_1, MESSAGE, TOPIC, and RANGE
 ENDPOINT = "a2jx2mgo671gkv-ats.iot.us-east-2.amazonaws.com"
 CLIENT_ID = "testDevice"
@@ -19,8 +20,9 @@ MESSAGE = "Hello World"
 PUB_TOPIC = "esp32/sub"
 SUB_TOPIC = "esp32/pub"
 RANGE = 20
+# ======================================================
 
-# Spin up resources
+
 event_loop_group = io.EventLoopGroup(1)
 host_resolver = io.DefaultHostResolver(event_loop_group)
 client_bootstrap = io.ClientBootstrap(event_loop_group, host_resolver)

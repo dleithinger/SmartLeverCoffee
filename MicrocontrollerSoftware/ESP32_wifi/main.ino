@@ -50,7 +50,11 @@ void connectAWS()
   Serial.println("Scan complete.");
 
   WiFi.mode(WIFI_STA);
+
+  // Normal wifi connecting
   // WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+
+  // Connecting wifi which needs to login with email and password
   WiFi.begin(WIFI_SSID, WPA2_AUTH_PEAP, WIFI_ID, WIFI_ID, WIFI_PASSWORD);
   
   ledOn(500);
