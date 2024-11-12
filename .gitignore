@@ -1,3 +1,5 @@
 .DS_STORE
 ServerSoftware/AWS_KEY/JULIA_KEY/*
+ServerSoftware/LeverCoffee_LLM/node_modules/*
+ServerSoftware/LeverCoffee_LLM/.env
 MicrocontrollerSoftware/ESP32_wifi/secrets.h
