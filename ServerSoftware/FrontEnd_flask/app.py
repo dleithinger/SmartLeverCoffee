@@ -48,6 +48,20 @@ print('Begin Publish')
 def main():
     return render_template('index.html')
 
+COFFEE_PRESSURE = [0, 0, 3, 4, 6, 9, 3]
+COFFEE_ANGLE = [180, 180, 135, 120, 90, 45, 135]
+@app.route("/keeppub", methods=['GET', 'POST'])
+def keeppub():
+    del COFFEE_ANGLE[0]
+    del COFFEE_PRESSURE[0]
+    if 0 < len(COFFEE_ANGLE):
+        a = COFFEE_ANGLE[0]
+        b = COFFEE_PRESSURE[0]
+        mqtt_connection.publish(topic=PUB_TOPIC, payload=json.dumps({"message": str(a)}), qos=mqtt.QoS.AT_LEAST_ONCE)
+        return """
+<meta http-equiv="refresh" content="2" />The current pressure is {}.""".format(b)
+    return render_template('index.html')
+
 @app.route("/pub", methods=['GET', 'POST'])
 def pub():
     if request.method == 'POST':

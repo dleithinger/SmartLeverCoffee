@@ -46,7 +46,7 @@ client.chat.completions
         },
         {
             role: "user",
-            content: "espresso, Time (seconds): [0, 5, 10, 15, 20, 25, 30], Pressure (bars): [0, 3, 6, 9, 9, 6, 3]",
+            content: "espresso, Time (seconds): [0, 5, 10, 15, 20, 25, 30], Pressure (bars): [0, 3, 6, 9, 9, 6, 9]",
         },
     ],
     function_call: "auto", // "auto" is default but we'll make it explicit
