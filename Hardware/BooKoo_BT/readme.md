@@ -6,7 +6,7 @@ This is the **protocol documentation** for the **BooKoo Mini Scale**:
 ## **Steps to Run the Code:**  
 1. Install the required package:  
    ```bash
-   pip3 install bleak
+   pip3 install bleak, matplotlib
    ```
 2. Run check_bt_connection.py first to find the device's address.
 3. Then, run mini_scale_get_weight.py to retrieve real-time weight data.
